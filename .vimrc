@@ -2,13 +2,18 @@
 set nocompatible
 filetype plugin on
 filetype indent on
-let g:EasyMotion_leader_key = '<space>'
+let mapleader="\<Space>"
+let g:EasyMotion_leader_key = "\<Leader>"
 
 "Formatting options:
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set number
+
+"Search options
+set incsearch
+set hlsearch
 
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
