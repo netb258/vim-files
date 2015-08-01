@@ -13,7 +13,7 @@ set number
 
 "Search options
 set incsearch
-set hlsearch
+set nohlsearch
 
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
