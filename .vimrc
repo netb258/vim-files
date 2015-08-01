@@ -9,9 +9,14 @@ let g:EasyMotion_leader_key = "\<Leader>"
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set number
 
-"Search options
+"Turn on line numbers and syntax highlighting:
+syntax on
+set number
+"The ruler is useful, it shows me which column I'm on.
+set ruler
+
+"Search options:
 set incsearch
 set nohlsearch
 
