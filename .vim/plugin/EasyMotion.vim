@@ -1,14 +1,16 @@
-scriptencoding utf-8
 " EasyMotion - Vim motions on speed!
 "
-" Author: Kim SilkebГ¦kken <kim.silkebaekken+vim@gmail.com>
+" Author: Kim Silkebækken <kim.silkebaekken+vim@gmail.com>
 "         haya14busa <hayabusa1419@gmail.com>
 " Source: https://github.com/Lokaltog/vim-easymotion
 " == Script initialization {{{
 if expand("%:p") ==# expand("<sfile>:p")
   unlet! g:EasyMotion_loaded
 endif
-if exists('g:EasyMotion_loaded') || &compatible || version < 703
+if exists('g:EasyMotion_loaded') || &compatible
+    finish
+elseif version < 702
+    echomsg "This version of EasyMotion requires Vim 7.2 or later"
     finish
 endif
 
@@ -204,18 +206,12 @@ xnoremap <silent><Plug>(easymotion-eol-bd-jk) <Esc>:<C-u>call EasyMotion#Eol(1,2
 "}}}
 
 " -- Search Motion {{{
-noremap  <silent><Plug>(easymotion-n)         :<C-u>call EasyMotion#Search(0,0,0)<CR>
-xnoremap <silent><Plug>(easymotion-n)    <Esc>:<C-u>call EasyMotion#Search(1,0,0)<CR>
-noremap  <silent><Plug>(easymotion-N)         :<C-u>call EasyMotion#Search(0,1,0)<CR>
-xnoremap <silent><Plug>(easymotion-N)    <Esc>:<C-u>call EasyMotion#Search(1,1,0)<CR>
-
-noremap  <silent><Plug>(easymotion-vim-n)      :<C-u>call EasyMotion#Search(0,0,1)<CR>
-xnoremap <silent><Plug>(easymotion-vim-n) <Esc>:<C-u>call EasyMotion#Search(1,0,1)<CR>
-noremap  <silent><Plug>(easymotion-vim-N)      :<C-u>call EasyMotion#Search(0,1,1)<CR>
-xnoremap <silent><Plug>(easymotion-vim-N) <Esc>:<C-u>call EasyMotion#Search(1,1,1)<CR>
-
-noremap  <silent><Plug>(easymotion-bd-n)      :<C-u>call EasyMotion#Search(0,2,0)<CR>
-xnoremap <silent><Plug>(easymotion-bd-n) <Esc>:<C-u>call EasyMotion#Search(1,2,0)<CR>
+noremap  <silent><Plug>(easymotion-n)         :<C-u>call EasyMotion#Search(0,0)<CR>
+xnoremap <silent><Plug>(easymotion-n)    <Esc>:<C-u>call EasyMotion#Search(1,0)<CR>
+noremap  <silent><Plug>(easymotion-N)         :<C-u>call EasyMotion#Search(0,1)<CR>
+xnoremap <silent><Plug>(easymotion-N)    <Esc>:<C-u>call EasyMotion#Search(1,1)<CR>
+noremap  <silent><Plug>(easymotion-bd-n)      :<C-u>call EasyMotion#Search(0,2)<CR>
+xnoremap <silent><Plug>(easymotion-bd-n) <Esc>:<C-u>call EasyMotion#Search(1,2)<CR>
 "}}}
 
 " -- Jump To Anywhere Motion {{{
@@ -232,7 +228,9 @@ xnoremap <silent><Plug>(easymotion-repeat)
     \ <Esc>:<C-u>call EasyMotion#Repeat(1)<CR>
 
 noremap  <silent><Plug>(easymotion-dotrepeat)
-    \      :<C-u>call EasyMotion#DotRepeat()<CR>
+    \      :<C-u>call EasyMotion#DotRepeat(0)<CR>
+xnoremap <silent><Plug>(easymotion-dotrepeat)
+    \ <Esc>:<C-u>call EasyMotion#DotRepeat(1)<CR>
 "}}}
 
 " -- Next,Previous Motion {{{
@@ -344,4 +342,3 @@ let &cpo = s:save_cpo
 unlet s:save_cpo
 " }}}
 " vim: fdm=marker:et:ts=4:sw=4:sts=4
-

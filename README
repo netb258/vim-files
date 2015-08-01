@@ -1,1 +1,10 @@
 Minimal vimrc and configuration files.
+
+Included plugings:
+
+* surround.vim
+* EasyMotion.vim (compatible with VIM 7.2)
+* repeat.vim
+* textobj and textobj-ruby
+
+Aside from these plugins, there is also a slightly modified xoria256 colorscheme and a few indent scripts.

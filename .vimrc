@@ -3,7 +3,7 @@ set nocompatible
 filetype plugin on
 filetype indent on
 let mapleader="\<Space>"
-let g:EasyMotion_leader_key = "\<Leader>"
+let g:EasyMotion_leader_key="\<Leader>"
 
 "Formatting options:
 set tabstop=2
@@ -20,16 +20,20 @@ set ruler
 set incsearch
 set nohlsearch
 
+"Set small delays when switching between normal, insert and visual mode.
+set timeoutlen=1000
+set ttimeoutlen=0
+
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
 set t_Co=256
 colorscheme xoria256
 runtime macros/matchit.vim
 "I don't want to highlight matching parenthesis.
-let g:loaded_matchparen = 1
+let g:loaded_matchparen=1
 
 "HTML and JavaScript indent options:
-let g:html_indent_inctags = "html,body,head,tbody,li,p"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
-let g:SimpleJsIndenter_BriefMode = 1
+let g:html_indent_inctags="html,body,head,tbody,li,p"
+let g:html_indent_script1="inc"
+let g:html_indent_style1="inc"
+let g:SimpleJsIndenter_BriefMode=1
