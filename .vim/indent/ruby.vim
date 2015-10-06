@@ -48,7 +48,7 @@ function GetRubyIndent()
   let ind = indent(lnum)
   let flag = 0
   if prev_line =~ reg
-        \ || prev_line =~ '\({\|\<do\>\).*|.*|\s*$'
+        \ || prev_line =~ '\({\|\<do\>\).*|.*|\(\s*#.*\)\=$'
         \ || prev_line =~ '\<do\>\(\s*#.*\)\=$'
     let ind = ind + &sw
     let flag = 1
