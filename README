@@ -6,5 +6,6 @@ Included plugings:
 * EasyMotion.vim (compatible with VIM 7.2)
 * repeat.vim
 * textobj and textobj-ruby
+* Nerd Tree
 
 Aside from these plugins, there is also a slightly modified xoria256 colorscheme and a few indent scripts.
