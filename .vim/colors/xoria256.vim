@@ -44,7 +44,7 @@ hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
-hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
+hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f cterm=none gui=none
 hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
@@ -54,7 +54,7 @@ hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
 hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
 hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
 hi PmenuThumb   ctermfg=243 guifg=#767676
-hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
+hi Search       ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf 
 hi SignColumn   ctermfg=248 guifg=#a8a8a8
 hi SpecialKey   ctermfg=255  guifg=#ffffff
 hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underline               guisp=#df0000
