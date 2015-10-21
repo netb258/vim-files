@@ -11,28 +11,22 @@ set number
 
 let mapleader="\<Space>"
 
-"Map leader p to paste from clipboard
-noremap <leader>p "+p
-"Map leader y to yank to the clipboard
-noremap <leader>y "+y
-
-"Map leader P to paste from clipboard
-noremap <leader>P "+P
-"Map leader Y to yank to the clipboard
-noremap <leader>Y "+Y
-
 "Opening tabs
-nnoremap <leader>t :tabnew<cr>
+map <Leader>t :tabnew<cr>
 
 "Disable default easy-motion mappings
 let g:EasyMotion_do_mapping = 0 
 
-"Bi-directional find motion (comma is already a VIM motion, but I never use it)
-map , <Plug>(easymotion-s)
+"Bi-directional find motion
+map <Leader>f <Plug>(easymotion-s)
 
 "JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+"Search mapping
+map <Leader>n <Plug>(easymotion-bd-n)
+nnoremap <Leader>h :noh<cr>
 
 "----------------------------------------------------------------------------------------
 
@@ -43,7 +37,7 @@ set expandtab
 
 "Search options:
 set incsearch
-set nohlsearch
+set hlsearch
 set ignorecase "use case insensitive searching
 set smartcase  "^ unless a capital letter is used
 
@@ -56,6 +50,8 @@ set ruler
 
 "I want pwd to be the same as the file I'm editing.
 set autochdir
+
+set history=100 "Remember more commands and searches
 
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
