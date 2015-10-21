@@ -26,7 +26,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 "Search mapping
 map <Leader>n <Plug>(easymotion-bd-n)
-nnoremap <Leader>h :noh<cr>
+map <Leader>h :noh<cr>
 
 "----------------------------------------------------------------------------------------
 
