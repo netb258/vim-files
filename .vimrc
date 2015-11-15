@@ -7,29 +7,6 @@ filetype indent on
 syntax on
 set number
 
-"----------------------------------- Custom Mappings ------------------------------------
-
-let mapleader="\<Space>"
-
-"Opening tabs
-map <Leader>t :tabnew<cr>
-
-"Disable default easy-motion mappings
-let g:EasyMotion_do_mapping = 0 
-
-"Bi-directional find motion
-map <Leader>f <Plug>(easymotion-s)
-
-"JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
-"Search mapping
-map <Leader>n <Plug>(easymotion-bd-n)
-map <Leader>h :noh<cr>
-
-"----------------------------------------------------------------------------------------
-
 "Formatting options:
 set tabstop=2
 set shiftwidth=2
@@ -51,7 +28,47 @@ set ruler
 "I want pwd to be the same as the file I'm editing.
 set autochdir
 
-set history=100 "Remember more commands and searches
+"Remember more commands and searches
+set history=100
+
+"Enable the backspace key in insert mode.
+set backspace=2
+
+"When I close a tab, remove the buffer.
+set nohidden
+
+"Enable command and file-name completion with <tab>.
+set wildmenu
+set wildmode=list:longest,full
+
+"----------------------------------- Custom Mappings ------------------------------------
+
+let mapleader="\<Space>"
+
+"Opening tabs
+map <Leader>t :tabnew<cr>
+
+"Disable default easy-motion mappings
+let g:EasyMotion_do_mapping = 0 
+
+"Bi-directional find motion
+map <Leader><Leader> <Plug>(easymotion-s)
+
+"JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+"Search mapping
+map <Leader>n <Plug>(easymotion-bd-n)
+
+"I want the current search highlight to be cleared when I hit escape.
+nnoremap <silent> <esc> :noh<cr><esc>
+"This one is needed, for the above mapping to behave well in the terminal.
+nnoremap <esc>^[ <esc>^[
+"I also want this mapping in insert mode.
+inoremap <silent> <esc> <esc>:noh<cr>
+
+"----------------------------------------------------------------------------------------
 
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
