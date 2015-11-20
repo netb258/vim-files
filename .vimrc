@@ -24,16 +24,11 @@ set smartcase  "^ unless a capital letter is used
 set timeoutlen=1000
 set ttimeoutlen=0
 
-"Always show status line
-set laststatus=2
 "The ruler is useful, it shows me which column I'm on.
 set ruler
 
 "I want pwd to be the same as the file I'm editing.
 set autochdir
-
-"Remember more commands and searches
-set history=100
 
 "Enable the backspace key in insert mode.
 set backspace=2
@@ -41,9 +36,10 @@ set backspace=2
 "When I close a tab, remove the buffer.
 set nohidden
 
-"Enable command and file-name completion with <tab>.
-set wildmenu
-set wildmode=list:longest,full
+"Command mode options:
+set wildmenu "Enable command and file-name completion with <tab>.
+set wildmode=list:longest,full "Completion results organization.
+set history=100 "Remember more commands and such.
 
 "----------------------------------- Custom Mappings -------------------------------------
 
@@ -53,7 +49,7 @@ let mapleader="\<Space>"
 "Opening tabs
 map <Leader>t :tabnew<cr>
 
-"Disable the default easy-motion mappings
+"Disable default easy-motion mappings
 let g:EasyMotion_do_mapping = 0
 
 "Bi-directional find motion
@@ -63,9 +59,6 @@ map <Leader><Leader> <Plug>(easymotion-s)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-"Search mapping
-map <Leader>n <Plug>(easymotion-bd-n)
-
 "Make yanking distant lines easier:
 nmap yj y<Plug>(easymotion-j)
 nmap yk y<Plug>(easymotion-k)
@@ -74,6 +67,8 @@ nmap yk y<Plug>(easymotion-k)
 nmap dj d<Plug>(easymotion-j)
 nmap dk d<Plug>(easymotion-k)
 
+"Search mappings:
+map <Leader>n <Plug>(easymotion-bd-n)
 "I want the current search highlight to be cleared when I hit escape.
 nnoremap <silent> <esc> :noh<cr><esc>
 "This one is needed, for the above mapping to behave well in the terminal.
