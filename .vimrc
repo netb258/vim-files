@@ -1,3 +1,5 @@
+"----------------------------------- General Settings ------------------------------------
+
 "Plugins and compatibility:
 set nocompatible
 filetype plugin on
@@ -22,6 +24,8 @@ set smartcase  "^ unless a capital letter is used
 set timeoutlen=1000
 set ttimeoutlen=0
 
+"Always show status line
+set laststatus=2
 "The ruler is useful, it shows me which column I'm on.
 set ruler
 
@@ -41,15 +45,16 @@ set nohidden
 set wildmenu
 set wildmode=list:longest,full
 
-"----------------------------------- Custom Mappings ------------------------------------
+"----------------------------------- Custom Mappings -------------------------------------
 
+"My leader key is space
 let mapleader="\<Space>"
 
 "Opening tabs
 map <Leader>t :tabnew<cr>
 
 "Disable default easy-motion mappings
-let g:EasyMotion_do_mapping = 0 
+let g:EasyMotion_do_mapping = 0
 
 "Bi-directional find motion
 map <Leader><Leader> <Plug>(easymotion-s)
@@ -61,6 +66,14 @@ map <Leader>k <Plug>(easymotion-k)
 "Search mapping
 map <Leader>n <Plug>(easymotion-bd-n)
 
+"Make yanking distant lines easier:
+nmap yj y<Plug>(easymotion-j)
+nmap yk y<Plug>(easymotion-k)
+
+"Make deleting distant lines easier:
+nmap dj d<Plug>(easymotion-j)
+nmap dk d<Plug>(easymotion-k)
+
 "I want the current search highlight to be cleared when I hit escape.
 nnoremap <silent> <esc> :noh<cr><esc>
 "This one is needed, for the above mapping to behave well in the terminal.
@@ -68,7 +81,7 @@ nnoremap <esc>^[ <esc>^[
 "I also want this mapping in insert mode.
 inoremap <silent> <esc> <esc>:noh<cr>
 
-"----------------------------------------------------------------------------------------
+"----------------------------------- Lesser Settings -------------------------------------
 
 "Colors and matching:
 set matchpairs=(:),{:},[:],<:>
