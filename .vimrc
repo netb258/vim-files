@@ -43,19 +43,19 @@ set history=100 "Remember more commands and such.
 
 "----------------------------------- Custom Mappings -------------------------------------
 
-"My leader key is space
+"My leader key is space.
 let mapleader="\<Space>"
 
-"Opening tabs
+"Opening tabs.
 map <Leader>t :tabnew<cr>
 
-"Disable default easy-motion mappings
+"Disable default easy-motion mappings.
 let g:EasyMotion_do_mapping = 0
 
-"Bi-directional find motion
+"Bi-directional find motion.
 map <Leader><Leader> <Plug>(easymotion-s)
 
-"JK motions: Line motions
+"JK line motions:
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
