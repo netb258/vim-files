@@ -53,7 +53,7 @@ let mapleader="\<Space>"
 "Opening tabs
 map <Leader>t :tabnew<cr>
 
-"Disable default easy-motion mappings
+"Disable the default easy-motion mappings
 let g:EasyMotion_do_mapping = 0
 
 "Bi-directional find motion
