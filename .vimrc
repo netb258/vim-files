@@ -17,10 +17,10 @@ set expandtab
 "Search options:
 set incsearch
 set hlsearch
-set ignorecase "use case insensitive searching
-set smartcase  "^ unless a capital letter is used
+set ignorecase "Use case insensitive searching.
+set smartcase  "^ unless a capital letter is used.
 
-"Set small delays when switching between normal, insert and visual mode.
+"Set small delays when switching between normal, insert and visual mode:
 set timeoutlen=1000
 set ttimeoutlen=0
 
