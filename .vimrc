@@ -69,6 +69,7 @@ nmap dk d<Plug>(easymotion-k)
 
 "Search mappings:
 map <Leader>n <Plug>(easymotion-bd-n)
+
 "I want the current search highlight to be cleared when I hit escape.
 nnoremap <silent> <esc> :noh<cr><esc>
 "This one is needed, for the above mapping to behave well in the terminal.
@@ -83,6 +84,17 @@ noremap ? ?\V
 
 "With this: Just record a scratch macro with qq, then play it back with backspace
 nnoremap <bs> @q
+
+"Better tab navigation
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
 
 "----------------------------------- Lesser Settings -------------------------------------
 
