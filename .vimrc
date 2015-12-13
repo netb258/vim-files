@@ -76,6 +76,14 @@ nnoremap <esc>^[ <esc>^[
 "I also want this mapping in insert mode.
 inoremap <silent> <esc> <esc>:noh<cr>
 
+"Change VIM's default regexp scheme, now all characters are literals in searches
+"If I want to togge this I can simply press backspace and type small v
+noremap / /\V
+noremap ? ?\V
+
+"With this: Just record a scratch macro with qq, then play it back with backspace
+nnoremap <bs> @q
+
 "----------------------------------- Lesser Settings -------------------------------------
 
 "Colors and matching:
